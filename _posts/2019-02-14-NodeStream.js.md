@@ -134,6 +134,7 @@ console.log(flag); // false
 **highWaterMark**
  >highWaterMark只是一个标识，一般配合着读取来用，例如：
 预计用上述highWaterMark内存容量，假如有个文件 1g大小，每次读取64k，读取后超出最高水位线应该暂停一下 rs.pause()，若不暂停，会导致缓存过大
+
 ```
 // 抽干, 即缓存中文件已被全部写入文件中（前提是，当前写入内容 >= highWaterMark）
 	ws.on('drain', function(){
